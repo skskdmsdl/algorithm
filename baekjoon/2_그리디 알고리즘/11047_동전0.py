@@ -7,11 +7,20 @@ n, k = map(int, input().split())
 
 num = []
 for i in range(n):
-    num.append(input())
+    num.append(int(input()))
 
 cnt = 0
-for i in reversed(range(n)):
-    cnt += k//num[i]
-    k = k%num[i]
+# for i in reversed(range(n)):
+#     cnt += k//num[i]
+#     k = k%num[i]
+
+# print(cnt)
+
+i = n-1
+
+while k != 0:
+    cnt += k//num[i] # 동전의 개수를 저장
+    k %= num[i] # 동전의 가치로 나눈 나머지를 저장
+    i -= 1 # 인덱스를 감소
 
 print(cnt)
