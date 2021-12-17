@@ -13,5 +13,12 @@
 
 # 첫째 줄에 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 출력한다.
 
-
+n = int(input())
+s = list(map(int, input().split()))
+num = 0
+s.sort()
+for i in range(n):
+    for j in range(i + 1):
+        num += s[j]
+print(num)
 
