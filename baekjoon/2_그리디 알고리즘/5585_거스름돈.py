@@ -14,3 +14,15 @@ for i in b:
     count += a // i
     a %= i
 print(count)
+
+# N = int(input())
+# coins = [500, 100, 50, 10, 5, 1]
+
+# rest = 1000 - N
+# result = 0
+
+# for coin in coins:
+#     result += rest // coin
+#     rest = rest % coin
+
+# print(result)
