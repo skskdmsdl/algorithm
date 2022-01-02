@@ -7,3 +7,14 @@
 
 # 각 로프들에 대한 정보가 주어졌을 때, 이 로프들을 이용하여 들어올릴 수 있는 물체의 최대 중량을 구해내는 프로그램을 작성하시오. 
 # 모든 로프를 사용해야 할 필요는 없으며, 임의로 몇 개의 로프를 골라서 사용해도 된다.
+
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+rope = sorted([int(input()) for i in range(n)])[::-1]
+dp = []
+
+for i in range(n):
+    dp.append(rope[i]*(i+1))
+print(max(dp))
